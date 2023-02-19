@@ -1,6 +1,5 @@
 package com.sgc.model.enums;
 
-import com.sgc.util.MessageUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -37,6 +36,6 @@ public enum Category {
         return Stream.of(Category.values())
                 .filter(category -> category.getValue().equals(value))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException(MessageUtil.CATEGORY_NOT_FOUND));
+                .orElseThrow(() -> new IllegalArgumentException("Could not find value " + value));
     }
 }

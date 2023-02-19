@@ -1,6 +1,5 @@
 package com.sgc.model.enums;
 
-import com.sgc.util.MessageUtil;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,6 +29,6 @@ public enum Status {
         return Stream.of(Status.values())
                 .filter(status -> status.getValue().equals(value))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException(MessageUtil.STATUS_NOT_FOUND));
+                .orElseThrow(() -> new IllegalArgumentException("Could not find value " + value));
     }
 }
