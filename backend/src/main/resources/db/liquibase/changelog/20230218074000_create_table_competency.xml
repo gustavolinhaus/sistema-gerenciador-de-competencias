@@ -19,6 +19,9 @@
             <column name="category" type="varchar(14)">
                 <constraints nullable="false"></constraints>
             </column>
+            <column name="status" type="varchar(8)">
+                <constraints nullable="false"></constraints>
+            </column>
         </createTable>
     </changeSet>
 
